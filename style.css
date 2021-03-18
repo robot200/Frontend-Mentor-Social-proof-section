@@ -1,0 +1,264 @@
+:root {
+  --dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --gray-magenta: hsl(303, 10%, 53%);
+  --light-gray-magenta: hsl(300, 24%, 96%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(/images/bg-pattern-top-desktop.svg),
+    url(/images/bg-pattern-bottom-desktop.svg);
+  background-position: top left, bottom right;
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: "Spartan", sans-serif;
+  font-size: 15px;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.section1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 7rem 2rem;
+  position: relative;
+}
+.intro-text {
+  width: 50%;
+  position: relative;
+  left: 8rem;
+}
+h1 {
+  color: var(--dark-magenta);
+  font-size: 3.4rem;
+  line-height: 3.5rem;
+  letter-spacing: -0.2rem;
+  width: 65%;
+}
+.intro_p {
+  color: var(--gray-magenta);
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.8rem;
+  width: 70%;
+}
+
+.rated {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  position: relative;
+  right: 7rem;
+}
+.rated-box {
+  background: var(--light-gray-magenta);
+  width: 60%;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.stars > img {
+  padding-left: 0.2rem;
+}
+.stars {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+h5 {
+  display: inline-block;
+  padding-left: 2rem;
+  font-size: 1rem;
+  color: var(--dark-magenta);
+}
+.rated-box:nth-child(1) {
+  position: relative;
+  right: 4rem;
+}
+.rated-box:nth-child(2) {
+  position: relative;
+  right: 2rem;
+}
+
+.section2 {
+  margin: 3rem 2rem;
+}
+.cards {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.card {
+  width: 23%;
+  padding: 3rem 2.5rem;
+  border-radius: 10px;
+  background: var(--dark-magenta);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.card:nth-child(2) {
+  position: relative;
+  top: 2rem;
+  margin: 0 2rem;
+}
+.card:nth-child(3) {
+  position: relative;
+  top: 4rem;
+}
+.card > p {
+  color: var(--light-gray-magenta);
+  padding-top: 10px;
+  line-height: 1.5rem;
+}
+.profile_pic > img {
+  border-radius: 50%;
+  width: 80%;
+}
+.name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1rem;
+}
+.name > h4 {
+  color: white;
+  font-weight: 500;
+}
+span {
+  color: var(--gray-magenta);
+  padding-top: 3px;
+}
+
+@media (max-width: 1250px) {
+  .cards {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    width: 50%;
+  }
+  .card:nth-child(1) {
+    position: relative;
+    right: 2rem;
+  }
+  .card:nth-child(3) {
+    position: relative;
+    left: 2rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .rated-box {
+    padding: 10px 15px;
+  }
+  .card:nth-child(1) {
+    right: 0;
+  }
+  .card:nth-child(3) {
+    left: 0;
+  }
+}
+
+@media (max-width: 980px) {
+  body {
+    overflow-x: hidden;
+  }
+  .section1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  .intro-text {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    left: 0;
+  }
+  .intro-text h1 {
+    width: 70%;
+  }
+  .rated {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem 7rem;
+  }
+  .rated-box {
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    margin: 10px 0;
+  }
+  .rated-box:nth-child(1) {
+    right: 0;
+  }
+  .rated-box:nth-child(2) {
+    right: 0;
+  }
+  .section2 {
+    margin-top: 0;
+  }
+  .card {
+    width: 70%;
+  }
+}
+@media (max-width: 760px) {
+  .section1 {
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .rated-box {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .stars {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  h5 {
+    width: 100%;
+    padding-left: 0;
+    text-align: center;
+    padding-top: 1rem;
+  }
+  .card {
+    width: 80%;
+  }
+}
+@media (max-width: 630px) {
+  .section1 {
+    margin: 5rem auto;
+    width: 100vw;
+  }
+  .card {
+    width: 90%;
+  }
+}
+@media (max-width: 420px) {
+}
